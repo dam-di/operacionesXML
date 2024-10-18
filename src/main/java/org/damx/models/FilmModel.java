@@ -59,4 +59,9 @@ public class FilmModel {
     public void setGenre(GenreModel genre) {
         this.genre = genre;
     }
+
+    @Override
+    public String toString() {
+        return name+"\n";
+    }
 }
