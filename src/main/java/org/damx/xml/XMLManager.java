@@ -10,8 +10,5 @@ import static org.damx.service.XMLService.ROOT_NODE;
 
 public class XMLManager {
 
-    public static boolean createFilm(FilmModel film){
-        return true;
-    }
 
 }
