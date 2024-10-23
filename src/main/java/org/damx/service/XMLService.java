@@ -13,9 +13,9 @@ import java.io.File;
 
 public class XMLService {
     // Constantes para los nombres de nodos y atributos
-    public static final String PROJECT_NAME = "operacionesXML";
-    public static final String ROOT_NODE = "project";
-    public static final String ARCHIVO_XML = "datos.xml";
+    public static final String PROJECT_NAME = "filmErcilla";
+    public static final String ROOT_NODE = "store";
+    public static final String ARCHIVO_XML = "peliculas.xml";
 
     /**
      * Carga el archivo XML desde la ruta especificada o lo crea si no existe.
@@ -135,6 +135,19 @@ public class XMLService {
 
             // Crear el nodo principal del documento
             Element rootElement = newDocument.createElement(ROOT_NODE);
+
+            // Crear el nodo films
+            Element filmsElement = newDocument.createElement("films");
+
+            // Añadir el nodo films al nodo ROOT
+            rootElement.appendChild(filmsElement);
+
+            // Crear el nodo genres
+            Element genresElement = newDocument.createElement("genres");
+
+            // Añadir el nodo generos al nodo ROOT
+            rootElement.appendChild(genresElement);
+
             // Añadir el nodo principal al documento
             newDocument.appendChild(rootElement);
 
